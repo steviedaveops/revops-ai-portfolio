@@ -1,0 +1,11 @@
+Account Name,Opportunity Name,Stage,Amount,Close Date,Days in Current Stage,Last Activity Date,Next Step,Next Step Date,Number of Contacts,Products,Push Counter,Opportunity Owner,Forecast Category,Stage History Notes
+Meridian Software,Meridian - Enterprise License,Negotiation,62000,2026-05-15,74,2026-05-10,,,1,None,3,Sarah Johnson,Commit,No notes at any stage transition
+Bluewave Analytics,Bluewave - Starter Pack,Discovery,18500,2026-07-31,12,2026-05-26,Send follow-up deck,2026-05-30,3,Analytics Suite,0,Marcus Lee,Pipeline,Discovery call completed - pain points confirmed - champion identified
+Crestline Health,Crestline - Platform Deal,Proposal,94000,2026-06-15,45,2026-05-08,Follow up on proposal,,2,Platform License,1,Sarah Johnson,Best Case,Discovery and demo notes logged - technical validation pending
+Orbit Dynamics,Orbit - SMB License,Closed Won,24000,2026-05-20,0,2026-05-20,N/A,N/A,4,SMB Suite,0,David Park,Closed Won,Full stage documentation - clean process
+Pinnacle Retail,Pinnacle - Growth Plan,Negotiation,0,2026-06-30,28,2026-05-25,Contract review call,2026-06-01,1,None,2,Marcus Lee,Commit,Demo notes present - proposal stage missing documentation
+Thornfield Media,Thornfield - Annual Contract,Proposal,41000,2026-05-10,67,2026-05-01,,,2,Content Suite,3,Rachel Adams,Best Case,Discovery notes only - demo and proposal stages undocumented
+Skyline Ventures,Skyline - Enterprise,Qualification,175000,2026-06-30,8,2026-05-27,Discovery call scheduled,2026-05-29,5,Enterprise Suite,0,David Park,Pipeline,Initial qualification complete - discovery scheduled
+Harmon Financial,Harmon - Core Package,Negotiation,53000,2026-04-30,91,2026-04-28,,,1,None,4,Rachel Adams,Commit,No stage notes - no activity in 30 days - pushed 4 times
+Cascade Education,Cascade - Team License,Demo,29000,2026-07-15,19,2026-05-24,Demo scheduled,2026-05-28,3,Team Suite,0,Marcus Lee,Pipeline,Qualification notes strong - champion confirmed - demo prep complete
+Vantage Logistics,Vantage - Pro Plan,Proposal,67000,2026-06-01,33,2026-05-13,Send revised proposal,2026-05-16,2,Pro Suite,1,Sarah Johnson,Best Case,Discovery and demo well documented - proposal sent - awaiting feedback
