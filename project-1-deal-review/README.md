@@ -107,6 +107,63 @@ specific job to do.
 
 ---
 
+## How to Use
+
+### Setup
+1. Go to [claude.ai](https://claude.ai) and click **Projects** 
+   in the left sidebar
+2. Click **New Project** → name it `RevOps Deal Review Assistant`
+3. Click **Set project instructions** and paste the full contents 
+   of `system-prompt.md` into the instructions field
+4. Click **Save**
+
+### Single Deal Review
+Start a new chat inside the project and paste deal data in this 
+format:
+
+- Account: [Account Name]
+- Stage: [Stage]
+- Amount: [Amount]
+- Close Date: [Date]
+- Days in Current Stage: [X]
+- Last Activity: [Date]
+- Next Step: [Text or None]
+- Next Step Date: [Date or None]
+- Contacts: [X]
+- Products: [List or None]
+- Push Counter: [X]
+- Notes: [Stage history notes]
+
+The assistant will return a full deal review automatically.
+
+### Batch Pipeline Review
+1. Export your Salesforce pipeline report as a CSV using the 
+   column structure in `sample-pipeline.csv`
+2. Start a new chat inside the project
+3. Upload the CSV using the attachment icon
+4. Send this trigger prompt: 
+Run a full pipeline review on the uploaded file. Apply all
+red flag criteria to every deal. Skip any Closed Won
+opportunities. Return Red and Yellow deals only, sorted by
+flag count descending. End with the pipeline health summary.
+Perform all flag analysis and calculations silently. Do not
+output any reasoning, working, data tables, or intermediate
+steps — not even in a code block. Output the final formatted
+report only, beginning with Section 1. When the report is
+complete, output a single line: "Type AUDIT LOG to see flag
+analysis."
+5. The assistant will return a fully formatted pipeline review 
+   report ready to share
+
+### Audit Log
+If you need to review how a deal was scored — to challenge a 
+flag or verify a calculation, type: AUDIT LOG
+
+The assistant will return the full per-deal flag analysis for 
+the most recent review.
+
+---
+
 ## Design Decisions
 
 ### Why separate Data Quality, Deal Health, and Process Integrity?
