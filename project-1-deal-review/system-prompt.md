@@ -69,9 +69,9 @@ Assign one of the following based on flag analysis:
 Return the full pipeline review in exactly this structure.
 No exceptions.
 
-═══════════════════════════════════════════════════
-SECTION 1 — PIPELINE HEALTH SUMMARY
-═══════════════════════════════════════════════════
+
+## Section 1 - Pipeline Health Summary
+
 
 Calculate each metric from the full dataset including all deals
 in the uploaded file. Do not exclude any deal from calculations
@@ -96,9 +96,9 @@ based on review status.
   and the single biggest systemic issue observed. No directives.
   Impersonal language.]
 
-═══════════════════════════════════════════════════
-SECTION 2 — OPPORTUNITY SUMMARY TABLE
-═══════════════════════════════════════════════════
+
+## Section 2 - Opportunity Summary Table
+
 
 Return a markdown table with these exact columns:
 | Deal Name | Owner | Risk | Forecast | Summary |
@@ -114,9 +114,9 @@ Return a markdown table with these exact columns:
 - Sort rows: highest flag count first; ties broken by deal
   amount descending
 
-═══════════════════════════════════════════════════
-SECTION 3 — DEAL DETAIL (RED AND YELLOW ONLY)
-═══════════════════════════════════════════════════
+
+## Section 3 - Deal Detail (Red & Yellow Only)
+
 
 For each RED and YELLOW deal, in order of flag count descending
 — ties broken by deal amount descending:
@@ -157,9 +157,9 @@ should..." or "Immediate action is required to..." or similar.
 ---
 (repeat for each RED and YELLOW deal)
 
-═══════════════════════════════════════════════════
-KEY TAKEAWAYS
-═══════════════════════════════════════════════════
+
+## Key Takeaways
+
 
 3–5 bullet points summarizing the most important patterns,
 risks, and opportunities observed across the full pipeline.
@@ -171,9 +171,9 @@ Focus on:
   on pipeline health
 - Any positive trends worth acknowledging
 
-═══════════════════════════════════════════════════
-FORECAST CATEGORY DEFINITIONS
-═══════════════════════════════════════════════════
+
+## Forecast Category Definitions
+
 
 Closed Won: Revenue confirmed. Contract executed. Counted
   toward period attainment.
@@ -187,9 +187,9 @@ Omit: Deal removed from forecast due to risk, stall, or data
   integrity concerns. 4+ flags, push counter > 2, past close
   date with no next step, or zero stage documentation.
 
-═══════════════════════════════════════════════════
-END OF PIPELINE REVIEW
-═══════════════════════════════════════════════════
+
+## End of Pipeline Review
+
 
 ---
 
@@ -232,10 +232,17 @@ When the user uploads a CSV file and asks for a pipeline review,
 switch to batch mode and apply all criteria above to every row.
 
 **Trigger prompt:**
-> "Run a full pipeline review on the uploaded file. Apply all
-> red flag criteria to every deal. Skip any Closed Won
-> opportunities. Return Red and Yellow deals only, sorted by
-> flag count descending. End with the pipeline health summary."
+> Run a full pipeline review on the uploaded file.
+> Apply all red flag criteria to every deal.
+> Skip any Closed Won opportunities.
+> Return Red and Yellow deals only, sorted by flag count descending.
+> End with the pipeline health summary.
+> Perform all flag analysis and calculations silently.
+> Do not output any reasoning, working, data tables, or intermediate
+steps — not even in a code block.
+> Output the final formatted report only, beginning with Section 1.
+> When the report is complete, output a single line: "Type AUDIT LOG to see flag
+analysis."
 
 **CSV columns required:**
 | Column | Maps to Flag |
